@@ -24,9 +24,7 @@
  *
  */
 
-
-#ifndef SIMPLETIMER_H
-#define SIMPLETIMER_H
+#pragma once
 
 #ifndef __AVR__
 #include <functional>
@@ -128,5 +126,3 @@ private:
     // actual number of timers in use
     int numTimers;
 };
-
-#endif

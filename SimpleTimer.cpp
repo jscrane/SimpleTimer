@@ -28,9 +28,11 @@
 
 
 // Select time function:
-//static inline unsigned long elapsed() { return micros(); }
+#if defined(SIMPLE_TIMER_MICROS)
+static inline unsigned long elapsed() { return micros(); }
+#else
 static inline unsigned long elapsed() { return millis(); }
-
+#endif
 
 SimpleTimer::SimpleTimer() {
     unsigned long current_millis = elapsed();
